@@ -41,10 +41,10 @@ PROFILE_PATH=/etc/profile
 
 if [ -d ${JDK_INSTALL_PATH} ]; then
     log "${JDK_INSTALL_PATH} directory already exists, please check it!"
-	exit 1
+    exit 1
 elif [ ! -f ${PROFILE_PATH} ]; then
     log "${PROFILE_PATH} file does not exist, please check it!"
-	exit 1
+    exit 1
 fi
 
 
