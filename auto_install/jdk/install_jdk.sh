@@ -63,7 +63,7 @@ log "Unzip ${JDK_INSTALL_ZIP} to ${JDK_INSTALL_PATH}"
 unzip -o ${JDK_INSTALL_ZIP} -d ${JDK_INSTALL_PATH} > /dev/null 2>&1
 
 
-# 将字符中 jdk1.8.0_66-linux-x64.zip 变为 jdk1.8.0_66
+# 将字符串 jdk1.8.0_66-linux-x64.zip 变为 jdk1.8.0_66
 JDK_DIR_NAME=${JDK_INSTALL_ZIP_NAME/'-linux-x64.zip'/''}
 log "Create ${JDK_INSTALL_PATH}/jdk soft links"
 ln -s ${JDK_INSTALL_PATH}/${JDK_DIR_NAME}/ ${JDK_INSTALL_PATH}/jdk
