@@ -21,7 +21,7 @@
 log()
 {
     echo "["$(date '+%Y-%m-%d %H:%M:%S')"] - $*"
-    echo "["$(date '+%Y-%m-%d %H:%M:%S')"] - $*" >> ${CURRENT_DIR}/install_jdk.log
+    echo "["$(date '+%Y-%m-%d %H:%M:%S')"] - $*" >> ${CURRENT_DIR}/install_erlang.log
 }
 
 
@@ -61,11 +61,11 @@ ERLANG_DIR_NAME=${ERLANG_INSTALL_TAR_NAME/'.tar.gz'/''}
 cd ${CURRENT_DIR}/${ERLANG_DIR_NAME}
 
 log "Start make erlang source code..."
-./configure --with-ssl --enable-threads --enable-smp-support --enable-kernel-poll --enable-hipe --without-javac > /dev/null 2>&1
-make > /dev/null 2>&1
+./configure --with-ssl --enable-threads --enable-smp-support --enable-kernel-poll --enable-hipe --without-javac
+make
 
 log "Start install erlang..."
-make install > /dev/null 2>&1
+make install
 
 ERLANG_PATH=$(whereis erl)
 log "${ERLANG_PATH}"
