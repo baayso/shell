@@ -33,7 +33,7 @@ if [ -z ${JDK_INSTALL_ZIP_NAME} ]; then
     exit 1
 fi
 
-
+DATE=$(date '+%Y-%m-%d-%H:%M:%S')
 CURRENT_DIR=$(cd "$(dirname "$0")"; pwd)
 JDK_INSTALL_ZIP=${CURRENT_DIR}/${JDK_INSTALL_ZIP_NAME}
 JDK_INSTALL_PATH=/usr/java
@@ -74,7 +74,7 @@ chmod -R 755 ${JDK_INSTALL_PATH}/jdk/jre/bin
 
 
 log "Set JAVA_HOME"
-cp ${PROFILE_PATH} ${PROFILE_PATH}.bak
+cp ${PROFILE_PATH} ${PROFILE_PATH}.${DATE}
 JAVA_HOME=/usr/java/jdk
 echo '' >> ${PROFILE_PATH}
 echo export "JAVA_HOME=${JAVA_HOME}" >> ${PROFILE_PATH}
