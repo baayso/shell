@@ -6,11 +6,11 @@
 
 ## [install:](https://github.com/baayso/shell/tree/master/install)
 
-[erlang:](https://github.com/baayso/shell/tree/master/install/erlang)
+[erlang](https://github.com/baayso/shell/tree/master/install/erlang)
 
-[jdk:](https://github.com/baayso/shell/tree/master/install/jdk)
+[jdk](https://github.com/baayso/shell/tree/master/install/jdk)
 
-[nodejs:](https://github.com/baayso/shell/tree/master/install/nodejs)
+[nodejs](https://github.com/baayso/shell/tree/master/install/nodejs)
 
 []()
 
